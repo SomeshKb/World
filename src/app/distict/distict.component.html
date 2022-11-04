@@ -1,0 +1,8 @@
+<p>distict works!</p>
+<div class="main">
+    <div class="container " *ngFor="let item of [].constructor(noOfRow); let i = index"
+      [ngClass]="i%2==0 ? 'even' : 'odd'">
+      <div (click)="onClick(i,j)" *ngFor="let item of [].constructor(noOfCol-1); let j = index"></div>
+      <div (click)="onClick(i,noOfCol-1)" *ngIf="i%2==0"></div>
+    </div>
+  </div>

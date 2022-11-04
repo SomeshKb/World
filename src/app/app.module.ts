@@ -4,15 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HexagonComponent } from './_component/hexagon/hexagon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BaseComponent } from './base/base.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DistictComponent } from './distict/distict.component';
+import { WorldComponent } from './world/world.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HexagonComponent
+    HexagonComponent,
+    BaseComponent,
+    DistictComponent,
+    WorldComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

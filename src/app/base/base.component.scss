@@ -1,0 +1,46 @@
+.base {
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding-top: 100px;
+
+  div {
+    .base-background {
+      height: 600px;
+      width: 600px;
+      background-color: white;
+      background-position: center center;
+      background-size: contain;
+      /* change it to cover and test */
+      background-repeat: no-repeat;
+      background-image: url("../../assets/city-base.jpeg");
+    }
+  }
+}
+
+
+.add-troops .first {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  top: 15px;
+  left: 25px;
+}
+
+.add-troops .second {
+
+}
+
+.add-troops .third {
+
+}
+
+.add-troops .fourth {
+
+}
+
+.add-troops .fifth {
+
+}
