@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NavigationExtras, Router } from '@angular/router';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'app-distict',
@@ -28,7 +29,8 @@ export class DistictComponent implements OnInit {
 
   onClick(i: number, j: number) {
     this.dialog.closeAll();
-    this.router.navigate(['base', i, j]);
+    this.dialog.open(BaseComponent, { data: { x: i, y: j } })
+    // this.router.navigate(['base', i, j]);
   }
 }
 

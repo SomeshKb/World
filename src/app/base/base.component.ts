@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
 @Component({
@@ -6,23 +7,24 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   templateUrl: './base.component.html',
   styleUrls: ['./base.component.scss']
 })
-export class BaseComponent implements OnInit {
+export class  BaseComponent implements OnInit {
 
   baseLocation: Position | null = null;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Position,private dialogRef: MatDialogRef<BaseComponent>) { 
+    console.log(data)
+    this.baseLocation = data;
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
-      if (isNaN(params['x']) || isNaN(params['y'])) {
-        this.router.navigateByUrl("/");
-      } else {
-        this.baseLocation = params as Position;
-      }
+    // this.route.params.subscribe((params: Params) => {
+    //   if (isNaN(params['x']) || isNaN(params['y'])) {
+    //     this.router.navigateByUrl("/");
+    //   } else {
+    //     this.baseLocation = params as Position;
+    //   }
 
-    })
+    // })
   }
 }
 

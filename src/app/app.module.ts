@@ -9,6 +9,7 @@ import { BaseComponent } from './base/base.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DistictComponent } from './distict/distict.component';
 import { WorldComponent } from './world/world.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WorldComponent } from './world/world.component';
     BrowserModule,
     AppRoutingModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

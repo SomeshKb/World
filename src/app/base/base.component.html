@@ -1,14 +1,55 @@
 
 <div class="base">
-    <div>
-        <p class="base-location" *ngIf="baseLocation">({{baseLocation.x}}  ,  {{baseLocation.y}})</p>
+
+    <div class="base-group">
+        <div class="button-group defence">
+            <button>
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+
+            <button>
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+
+            <button>
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+            <button>
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+            <button>
+                <mat-icon>add_circle_outline</mat-icon>
+            </button>
+        </div>
         <div class="base-background">
-            <button class="add-troops first"></button>
-            <button class="add-troops second"></button>
-            <button class="add-troops third"></button>
-            <button class="add-troops fourth"></button>
-            <button class="add-troops fifth"></button>
+        </div>
+        <div class="button-group attack">
+            <button>
+                <mat-icon>donut_large</mat-icon>
+            </button>
+
+            <button>
+                <mat-icon>donut_large</mat-icon>
+            </button>
+
+            <button>
+                <mat-icon>donut_large</mat-icon>
+            </button>
+            <button>
+                <mat-icon>donut_large</mat-icon>
+            </button>
+            <button>
+                <mat-icon>donut_large</mat-icon>
+            </button>
+        </div>
+
+        <div class="distict-military">
+            <p class="base-location" *ngIf="baseLocation">({{baseLocation.x}}  ,  {{baseLocation.y}})</p>
+
+            <div class="armies">
+            </div>
         </div>
     </div>
+
 </div>
 

@@ -1,46 +1,55 @@
 .base {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-items: center;
   justify-items: center;
   justify-content: center;
-  padding-top: 100px;
+}
 
-  div {
-    .base-background {
-      height: 600px;
-      width: 600px;
-      background-color: white;
-      background-position: center center;
-      background-size: contain;
-      /* change it to cover and test */
-      background-repeat: no-repeat;
-      background-image: url("../../assets/city-base.jpeg");
-    }
+.base-group {
+    display: flex;
+    flex-direction: row;
+  .base-background {
+    height: 483px;
+    width: 700px;
+    background-color: white;
+    background-position: center center;
+    background-size: contain;
+    /* change it to cover and test */
+    background-repeat: no-repeat;
+    background-image: url("../../assets/military_land.jpg");
   }
 }
 
-
-.add-troops .first {
-  position: relative;
-  width: 40px;
-  height: 50px;
-  top: 15px;
-  left: 25px;
+.button-group{
+    display: flex;
+    flex-direction: column; 
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        color: aquamarine;
+        cursor: pointer;
+        mat-icon{
+            height: 50px;
+            width: 50px;
+            font-size: 50px;
+        }
+    }
+}
+.attack{
+    button{
+        color: red;
+        cursor: default;
+    }
 }
 
-.add-troops .second {
-
-}
-
-.add-troops .third {
-
-}
-
-.add-troops .fourth {
-
-}
-
-.add-troops .fifth {
-
+.distict-military{
+    border-radius: 2px; 
+    .armies {
+        border: 1px solid black;
+        width: 300px;
+        min-height: 200px;
+    }
 }
