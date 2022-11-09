@@ -1,28 +1,48 @@
 <div class="disticts-view">
   <div class="distict-container even">
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.topLeft)"></div>
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottomLeft)"></div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.topLeft)">
+      <div class="hexa-inside" ></div>
+    </div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottomLeft)">
+      <div class="hexa-inside"></div>
+    </div>
 
   </div>
   <div class="distict-container odd">
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.top)"></div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.top)">
+      <div class="hexa-inside"></div>
+    </div>
     <div class="hexa center">
-      <div class="center-distict" >
-        <div class="main-distict">
-          <div class="container " *ngFor="let grid of gridArray; let i = index">
-            <div (click)="onClick(i,j)" *ngFor="let item of [].constructor(grid); let j = index"
-              [ngStyle]="{'left': getStartingMargin(grid, 7)+'px'}">
-            </div>  
+      <div class="hexa-inside">
+        <div class="center-distict">
+          <div class="main-distict">
+
+            <div class="container " *ngFor="let grid of gridArray; let i = index">
+              <div class="main-outside" (click)="onClick(i,j)" *ngFor="let item of [].constructor(grid); let j = index"
+                [ngStyle]="{'left': getStartingMargin(grid, 7)+'px'}">
+                <div class="main-inside"></div>
+              </div>
+
+
+            </div>
           </div>
         </div>
       </div>
-
     </div>
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottom)"></div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottom)">
+      <div class="hexa-inside"></div>
+    </div>
   </div>
   <div class="distict-container even">
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.topRight)"></div>
-    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottomRight)"></div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.topRight)">
+      <div class="hexa-inside"></div>
+    </div>
+    <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottomRight)">
+      <div class="hexa-inside"></div>
+    </div>
   </div>
 </div>
 
+<div class="outside">
+  <div class="inside"></div>
+</div>
