@@ -24,36 +24,40 @@ export class DistictComponent implements OnInit {
   color: tileColor = {
   }
 
+  tileMap: Map<String, Postion> = new Map();
+
   constructor(private router: Router, private dialog: MatDialog, private route: ActivatedRoute) {
     route.paramMap.subscribe((res: Params) => {
-      console.log(res['params'])
       this.currentDistict = res['params'];
+      Object.values(AdjacentDistict).map(x => {
+        let postion: Postion = calculateNextDistict(x, this.currentDistict);
+        this.tileMap.set(x, postion)
+      });
     })
-  }
+}
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {
+}
 
-  getColor(i: number) {
-    return this.color[i] ? this.color[i] : 'blue';
-  }
+getColor(i: number) {
+  return this.color[i] ? this.color[i] : 'blue';
+}
 
-  onClick(i: number, j: number) {
+onClick(i: number, j: number) {
 
-    this.dialog.closeAll();
-    this.dialog.open(BaseComponent, { data: { x: i, y: j } })
-    // this.router.navigate(['base', i, j]);
-  }
-  getStartingMargin(value: number, midRowValue: number) {
-    return ((midRowValue - value) * 33);
-  }
+  this.dialog.closeAll();
+  this.dialog.open(BaseComponent, { data: { x: i, y: j } })
+  // this.router.navigate(['base', i, j]);
+}
+getStartingMargin(value: number, midRowValue: number) {
+  return ((midRowValue - value) * 33);
+}
 
-  adjacentMartrix(adjacentDistict: AdjacentDistict) {
-    console.log(adjacentDistict)
-    let { x, y }: Postion = calculateNextDistict(adjacentDistict, this.currentDistict);
-    this.router.navigate(['distict', x, y]);
-
-  }
+adjacentMartrix(adjacentDistict: AdjacentDistict) {
+  console.log(adjacentDistict)
+  let { x, y }: Postion = calculateNextDistict(adjacentDistict, this.currentDistict);
+  this.router.navigate(['distict', x, y]);
+}
 }
 
 interface tileColor {

@@ -9,6 +9,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { DistictComponent } from './_component/distict/distict.component';
 import { WorldComponent } from './_component/world/world.component';
+import { FlatTopHexagonComponent } from './_component/flat-top-hexagon/flat-top-hexagon.component';
+import { PointedTopHexagonComponent } from './_component/pointed-top-hexagon/pointed-top-hexagon.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { WorldComponent } from './_component/world/world.component';
     HexagonComponent,
     BaseComponent,
     DistictComponent,
-    WorldComponent
+    WorldComponent,
+    FlatTopHexagonComponent,
+    PointedTopHexagonComponent
   ],
   imports: [
     BrowserModule,
