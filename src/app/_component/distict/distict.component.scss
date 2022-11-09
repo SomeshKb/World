@@ -1,0 +1,63 @@
+.disticts-view {
+  display: flex;
+  justify-content: center;
+  --s: 500px;
+  width: inherit;
+  margin-left: 20px;
+  margin-top: 17px;
+}
+
+.distict-container .hexa {
+  width: var(--s);
+  height: calc(var(--s)*0.8453);
+  display: inline-block;
+  font-size: initial;
+  clip-path: polygon(25% 0%, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background: #258019;
+  margin-bottom: 1px;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.distict-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: -9px;
+}
+
+.distict-container.odd {
+  margin-top: -213px;
+  margin-right: -114px;
+  margin-left: -123px;
+}
+
+.distict-container .hexa:hover {
+  // opacity: 0.8;
+}
+
+
+.main-distict {
+  --s: 40px;
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+  width: fit-content;
+}
+
+.container {
+  div {
+    position: relative;
+    width: 66px;
+    height: 66px;
+    display: inline-block;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: #092730;
+    opacity: 0.6;
+    z-index: 1;
+    margin: -10px 1px -10px 1px;
+  }
+}
+
+.center-distict {
+  position: relative;
+  top: 35px;
+  left: 12px;
+}

@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HexagonComponent } from './_component/hexagon/hexagon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BaseComponent } from './base/base.component';
+import { BaseComponent } from './_component/base/base.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DistictComponent } from './distict/distict.component';
-import { WorldComponent } from './world/world.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { DistictComponent } from './_component/distict/distict.component';
+import { WorldComponent } from './_component/world/world.component';
 
 @NgModule({
   declarations: [
