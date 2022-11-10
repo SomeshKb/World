@@ -20,6 +20,7 @@ export class DistictComponent implements OnInit {
   gridArray = [4, 5, 6, 7, 6, 5, 4]
   largestRow = 7;
   currentDistict: Postion = { x: -1, y: -1 }
+  armies = [1,2,3,7,8,7,7,7,7,7,7];
 
   color: tileColor = {
   }

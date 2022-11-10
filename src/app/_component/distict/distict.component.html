@@ -1,7 +1,7 @@
 <div class="disticts-view">
   <div class="distict-container even">
     <div class="hexa" (click)="adjacentMartrix(adjacentDistict.topLeft)">
-      <div class="hexa-inside" ></div>
+      <div class="hexa-inside"></div>
     </div>
     <div class="hexa" (click)="adjacentMartrix(adjacentDistict.bottomLeft)">
       <div class="hexa-inside"></div>
@@ -43,5 +43,20 @@
 
 
 <div class="distict-sidebar">
-  
+  <span class="distict-close">
+    <mat-icon>close</mat-icon>
+  </span>
+
+  <span class="distict-name">({{currentDistict.x}} , {{currentDistict.y}})</span>
+  <span class="armies-label">Armies in Distict</span>
+  <div class="distict-army">
+    <div class="armies" *ngFor="let item of armies; let i=index">
+      <ng-container *ngIf="item==1; else elseTemplate">
+        <mat-icon class="self">group</mat-icon>
+      </ng-container>
+      <ng-template #elseTemplate>
+        <mat-icon class="enemy">group</mat-icon>
+      </ng-template>
+    </div>
+  </div>
 </div>
