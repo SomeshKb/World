@@ -11,6 +11,7 @@ import { DistictComponent } from './_component/distict/distict.component';
 import { WorldComponent } from './_component/world/world.component';
 import { FlatTopHexagonComponent } from './_component/flat-top-hexagon/flat-top-hexagon.component';
 import { PointedTopHexagonComponent } from './_component/pointed-top-hexagon/pointed-top-hexagon.component';
+import { HeaderComponent } from './_component/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PointedTopHexagonComponent } from './_component/pointed-top-hexagon/poi
     DistictComponent,
     WorldComponent,
     FlatTopHexagonComponent,
-    PointedTopHexagonComponent
+    PointedTopHexagonComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
